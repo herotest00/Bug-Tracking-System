@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties id="jdbcProps">
+        <prop key="database.url">jdbc:mariadb://ellascont.ro:43307/bug_tracking_system</prop>
+        <prop key="database.username">adrian</prop>
+        <prop key="database.password">H3r0T3s70?</prop>
+    </util:properties>
+
+    <bean id="userValidator" class="domain.validator.UserValidator"/>
+    <bean id="userRepository" class="repo.UserDbRepository">
+        <constructor-arg ref="userValidator"/>
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="bugValidator" class="domain.validator.BugValidator"/>
+    <bean id="bugRepository" class="repo.BugDbRepository">
+        <constructor-arg ref="bugValidator"/>
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="messageValidator" class="domain.validator.MessageValidator"/>
+    <bean id="messageRepository" class="repo.MessageDbRepository">
+        <constructor-arg ref="messageValidator"/>
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="service" class="service.Service">
+        <constructor-arg ref="userRepository"/>
+        <constructor-arg ref="bugRepository"/>
+        <constructor-arg ref="messageRepository"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="service"/>
+        <property name="service" ref="service"/>
+        <property name="serviceInterface" value="service.IService"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+</beans>

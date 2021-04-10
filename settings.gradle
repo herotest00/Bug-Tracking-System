@@ -1,0 +1,5 @@
+rootProject.name = 'Bug Tracker System'
+include 'bts_client'
+include 'bts_common'
+include 'bts_server'
+
