@@ -1,0 +1,2 @@
+18 Apr 2021 11:46:57,311 INFO  repo.utils.DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system
+18 Apr 2021 11:47:24,394 INFO  repo.utils.DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system

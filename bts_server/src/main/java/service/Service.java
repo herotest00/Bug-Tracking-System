@@ -21,6 +21,7 @@ public class Service implements IService {
     private final BugRepository bugRepository;
     private final MessageRepository messageRepository;
     private final Map<String, Observer> loggedClients = new ConcurrentHashMap<>();
+    private final Map<UserType, Observer> loggedTypesOfUsers = new ConcurrentHashMap<>();
 
     public Service(UserRepository userRepository, BugRepository bugRepository, MessageRepository messageRepository) {
         this.userRepository = userRepository;
@@ -91,12 +92,16 @@ public class Service implements IService {
     @Override
     public User login(String username, String password, Observer client) {
         User user = userRepository.login(new User(username, password));
-        loggedClients.put(username, client);
+        if (user != null && user.getUserType() != null) {
+            loggedClients.put(username, client);
+            loggedTypesOfUsers.put(user.getUserType(), client);
+        }
         return user;
     }
 
     @Override
     public void logout(Observer client) {
-
+        while (loggedClients.values().remove(client));
+        while (loggedTypesOfUsers.values().remove(client));
     }
 }

@@ -21,3 +21,5 @@ javafx {
     version = "13"
     modules = [ 'javafx.controls' , 'javafx.fxml']
 }
+
+mainClassName = 'Main"'
