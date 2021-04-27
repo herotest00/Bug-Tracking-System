@@ -4,11 +4,11 @@ import constants.BugStatus;
 import constants.UserType;
 import domain.User;
 import exceptions.RepoException;
+import exceptions.ServiceException;
 import gui.utils.SceneManager;
 import gui.utils.enums.Scenes;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -31,6 +31,7 @@ public class AdministratorController implements Controller {
     @Override
     public void setUser(User user) {
         this.user = user;
+        users.setAll(mainController.findAllUsers());
     }
 
     public void addButtonTriggered() {
@@ -52,8 +53,8 @@ public class AdministratorController implements Controller {
             User user = mainController.addUser(username, password, userType);
             users.add(user);
             clearFields();
-        } catch (RepoException e) {
-            System.out.println("ASDA");
+        } catch (ServiceException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }
 
@@ -66,8 +67,8 @@ public class AdministratorController implements Controller {
         try {
             mainController.deleteUser(user.getId());
             users.remove(user);
-        } catch (RepoException e) {
-            System.out.println("ASDA");
+        } catch (ServiceException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }
 

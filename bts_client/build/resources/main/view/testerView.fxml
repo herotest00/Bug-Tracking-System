@@ -9,27 +9,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="gui.TesterController" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TesterController">
    <children>
-      <ListView layoutX="14.0" layoutY="53.0" prefHeight="281.0" prefWidth="239.0" />
+      <ListView fx:id="bugsList" layoutX="14.0" layoutY="53.0" prefHeight="281.0" prefWidth="239.0" />
       <Label layoutX="322.0" layoutY="45.0" text="Name">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextArea layoutX="373.0" layoutY="76.0" prefHeight="119.0" prefWidth="200.0" />
+      <TextArea fx:id="descriptionField" layoutX="373.0" layoutY="76.0" prefHeight="119.0" prefWidth="200.0" />
       <Label layoutX="282.0" layoutY="76.0" text="Description">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="373.0" layoutY="45.0" prefHeight="25.0" prefWidth="200.0" />
-      <Button layoutX="436.0" layoutY="209.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Add" />
-      <Button layoutX="399.0" layoutY="264.0" mnemonicParsing="false" prefWidth="75.0" text="Update" />
-      <Button layoutX="96.0" layoutY="348.0" mnemonicParsing="false" prefWidth="75.0" text="Remove" />
-      <ComboBox layoutX="14.0" layoutY="20.0" prefWidth="150.0" promptText="Filter by status" />
+      <TextField fx:id="nameField" layoutX="373.0" layoutY="45.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button layoutX="436.0" layoutY="209.0" mnemonicParsing="false" onAction="#addButtonTriggered" prefHeight="25.0" prefWidth="75.0" text="Add" />
+      <Button layoutX="399.0" layoutY="264.0" mnemonicParsing="false" onAction="#updateButtonTriggered" prefWidth="75.0" text="Update" />
+      <Button layoutX="96.0" layoutY="348.0" mnemonicParsing="false" onAction="#removeButtonTriggered" prefWidth="75.0" text="Remove" />
+      <ComboBox fx:id="filterComboBox" layoutX="14.0" layoutY="20.0" prefWidth="150.0" promptText="Filter by status" />
       <Button layoutX="285.0" layoutY="348.0" mnemonicParsing="false" prefWidth="75.0" text="Open chat" />
-      <Button layoutX="502.0" layoutY="348.0" mnemonicParsing="false" prefWidth="75.0" text="Logout" />
-      <ComboBox layoutX="282.0" layoutY="264.0" prefHeight="25.0" prefWidth="97.0" promptText="Status" />
+      <Button layoutX="502.0" layoutY="348.0" mnemonicParsing="false" onAction="#logoutButtonTriggered" prefWidth="75.0" text="Logout" />
+      <ComboBox fx:id="statusComboBox" layoutX="282.0" layoutY="264.0" prefHeight="25.0" prefWidth="97.0" promptText="Status" />
    </children>
 </AnchorPane>

@@ -32,6 +32,7 @@ public class ProgrammerController implements Controller {
     @Override
     public void setUser(User user) {
         this.user = user;
+        bugs.setAll(mainController.findBugsForProgrammer(user.getId()));
         mainController.setBugsList(bugs);
     }
 

@@ -6,7 +6,7 @@ import javax.persistence.*;
 import javax.persistence.Entity;
 
 @Entity(name = "User")
-@Table(name = "Users", indexes = { @Index(name = "IDX_UserUsernamePassword", columnList = "username, password")})
+@Table(name = "Users")
 public class User extends domain.Entity<Long> {
 
     private String username;
@@ -75,5 +75,10 @@ public class User extends domain.Entity<Long> {
 
     public void setUserType(UserType userType) {
         this.userType = userType;
+    }
+
+    @Override
+    public String toString() {
+        return username + "    " + userType;
     }
 }

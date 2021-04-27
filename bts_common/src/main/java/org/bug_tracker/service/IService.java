@@ -9,6 +9,7 @@ import observer.Observer;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 public interface IService {
 
@@ -16,9 +17,9 @@ public interface IService {
 
     void deleteUser(long id);
 
-    ArrayList<User> findAllUsers();
+    List<User> findAllUsers();
 
-    void reportBug(String name, String description, LocalDateTime reportDate, User tester);
+    void reportBug(User tester, String name, String description, LocalDateTime reportDate);
 
     //if programmer = null, update status of bug, else update programmer and status = means he tries to fix it
     //if status == fixed, update status and fixDate (check in controller that programmer is the one that the bug is assigned to)
@@ -29,19 +30,19 @@ public interface IService {
 
     //tester can see his fixed, opened, assigned bugs
     // duplicate too (but can't change status for them)
-    ArrayList<Bug> findAllBugsForTester(long id);
+    List<Bug> findAllBugsForTester(long id);
 
     //programmer can see his fixed, opened, assigned bugs
-    ArrayList<Bug> findAllBugsForProgrammer(long id);
+    List<Bug> findAllBugsForProgrammer(long id);
 
-    ArrayList<Bug> filterBugsByStatusForTester(long id, BugStatus status);
+    List<Bug> filterBugsByStatusForTester(long id, BugStatus status);
 
-    ArrayList<Bug> filterBugsByStatusForProgrammer(long id, BugStatus status);
+    List<Bug> filterBugsByStatusForProgrammer(long id, BugStatus status);
 
     void sendMessage(User sender, Bug bug, LocalDateTime sendDate);
 
     //chronological order
-    ArrayList<Message> findAllMessages(long id);
+    List<Message> findAllMessages(long id);
 
     User login(String username, String password, Observer client);
 

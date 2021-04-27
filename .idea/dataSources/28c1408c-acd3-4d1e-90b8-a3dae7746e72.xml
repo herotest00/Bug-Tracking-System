@@ -1048,5 +1048,156 @@
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
+    <table id="333" parent="2" name="Bugs"/>
+    <table id="334" parent="2" name="Messages"/>
+    <table id="335" parent="2" name="Users"/>
+    <table id="336" parent="2" name="hibernate_sequence"/>
+    <column id="337" parent="333" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="338" parent="333" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="339" parent="333" name="fix_date">
+      <Position>3</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="340" parent="333" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="341" parent="333" name="report_date">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="342" parent="333" name="status">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="343" parent="333" name="programmer_id">
+      <Position>7</Position>
+      <DataType>bigint(20)|0s</DataType>
+    </column>
+    <column id="344" parent="333" name="tester_id">
+      <Position>8</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="345" parent="333" name="FKpqax4fmibxyinmw9ru4u7qlis">
+      <ColNames>programmer_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="346" parent="333" name="FKk6sky9whqpr040d1hsvpq6dfm">
+      <ColNames>tester_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="347" parent="333" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="348" parent="333" name="FKpqax4fmibxyinmw9ru4u7qlis">
+      <ColNames>programmer_id</ColNames>
+      <RefTableName>Users</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="349" parent="333" name="FKk6sky9whqpr040d1hsvpq6dfm">
+      <ColNames>tester_id</ColNames>
+      <RefTableName>Users</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="350" parent="334" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="351" parent="334" name="message">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="352" parent="334" name="send_date">
+      <Position>3</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="353" parent="334" name="id_bug">
+      <Position>4</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="354" parent="334" name="id_sender">
+      <Position>5</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="355" parent="334" name="FKfopsfsc8ts5tpk82f75pp8k7f">
+      <ColNames>id_bug</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="356" parent="334" name="FKcnsbmbk7uo1uv6b4wifsx3o60">
+      <ColNames>id_sender</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="357" parent="334" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="358" parent="334" name="FKfopsfsc8ts5tpk82f75pp8k7f">
+      <ColNames>id_bug</ColNames>
+      <RefTableName>Bugs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="359" parent="334" name="FKcnsbmbk7uo1uv6b4wifsx3o60">
+      <ColNames>id_sender</ColNames>
+      <RefTableName>Users</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="360" parent="335" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="361" parent="335" name="password">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="362" parent="335" name="type">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="363" parent="335" name="username">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="364" parent="335" name="UK_23y4gd49ajvbqgl3psjsvhff6">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="365" parent="335" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="366" parent="335" name="UK_23y4gd49ajvbqgl3psjsvhff6">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>UK_23y4gd49ajvbqgl3psjsvhff6</UnderlyingIndexName>
+    </key>
+    <column id="367" parent="336" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+    </column>
   </database-model>
 </dataSource>

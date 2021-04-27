@@ -1,5 +1,6 @@
 package org.bug_tracker.service;
 
+import constants.ActionType;
 import constants.BugStatus;
 import constants.UserType;
 import domain.Bug;
@@ -12,8 +13,9 @@ import org.bug_tracker.repo.MessageRepository;
 import org.bug_tracker.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.rmi.RemoteException;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -26,30 +28,58 @@ public class Service implements IService {
     private BugRepository bugRepository;
     @Autowired
     private MessageRepository messageRepository;
-    private final Map<String, Observer> loggedClients = new ConcurrentHashMap<>();
-    private final Map<UserType, Observer> loggedTypesOfUsers = new ConcurrentHashMap<>();
+    private final Map<User, Observer> loggedClients = new ConcurrentHashMap<>();
 
 
     @Override
     public User addUser(String username, String password, UserType userType) {
-        User user= new User(username, password, userType);
-        userRepository.save(user);
+        User user = new User(username, password, userType);
+        try {
+            userRepository.save(user);
+        } catch (Exception e) {
+            throw new ServiceException("Username already in use!");
+        }
         return user;
     }
 
     @Override
     public void deleteUser(long id) {
-        userRepository.delete(new User(id));
+        try {
+            userRepository.delete(new User(id));
+        } catch (Exception e) {
+            throw new ServiceException(e.getMessage());
+        }
     }
 
     @Override
-    public ArrayList<User> findAllUsers() {
-        return null;
+    public List<User> findAllUsers() {
+        return userRepository.findAll();
     }
 
     @Override
-    public void reportBug(String name, String description, LocalDateTime reportDate, User tester) {
+    public void reportBug(User tester, String name, String description, LocalDateTime reportDate) {
+        Bug bug = new Bug(name, description, reportDate, tester, BugStatus.OPEN);
+        try {
+            bugRepository.save(bug);
+        } catch (Exception e) {
+            throw new ServiceException(e.getMessage());
+        }
+        updateBugsForClients(bug, ActionType.ADD);
+    }
 
+    private void updateBugsForClients(Bug bug, ActionType actionType) {
+        for (Map.Entry<User, Observer> entry : loggedClients.entrySet()) {
+            User user = entry.getKey();
+            if (user.getUserType() != UserType.ADMINISTRATOR) {
+                Observer client = entry.getValue();
+                try {
+                    client.updateBugs(bug, actionType);
+                } catch (RemoteException e) {
+                    System.out.println("Error updating bug for " + user.getUsername());
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
     }
 
     @Override
@@ -59,27 +89,33 @@ public class Service implements IService {
 
     @Override
     public void deleteBug(long id) {
-
+        Bug bug = new Bug(id);
+        try {
+            bugRepository.delete(bug);
+            updateBugsForClients(bug, ActionType.REMOVE);
+        } catch (Exception e) {
+            throw new ServiceException(e.getMessage());
+        }
     }
 
     @Override
-    public ArrayList<Bug> findAllBugsForTester(long id) {
-        return null;
+    public List<Bug> findAllBugsForTester(long id) {
+        return bugRepository.findBugsByTester_Id(id);
     }
 
     @Override
-    public ArrayList<Bug> findAllBugsForProgrammer(long id) {
-        return null;
+    public List<Bug> findAllBugsForProgrammer(long id) {
+        return bugRepository.findBugsByProgrammer_Id(id);
     }
 
     @Override
-    public ArrayList<Bug> filterBugsByStatusForTester(long id, BugStatus status) {
-        return null;
+    public List<Bug> filterBugsByStatusForTester(long id, BugStatus status) {
+        return bugRepository.findBugsByStatusAndTester_Id(status, id);
     }
 
     @Override
-    public ArrayList<Bug> filterBugsByStatusForProgrammer(long id, BugStatus status) {
-        return null;
+    public List<Bug> filterBugsByStatusForProgrammer(long id, BugStatus status) {
+        return bugRepository.findBugsByStatusAndProgrammer_Id(status, id);
     }
 
     @Override
@@ -88,7 +124,7 @@ public class Service implements IService {
     }
 
     @Override
-    public ArrayList<Message> findAllMessages(long id) {
+    public List<Message> findAllMessages(long id) {
         return null;
     }
 
@@ -96,8 +132,7 @@ public class Service implements IService {
     public User login(String username, String password, Observer client) {
         User user = userRepository.findByUsernameAndPassword(username, password);
         if (user != null && user.getUserType() != null) {
-            loggedClients.put(username, client);
-            loggedTypesOfUsers.put(user.getUserType(), client);
+            loggedClients.put(user, client);
         }
         else throw new ServiceException("Invalid username/password!");
         return user;
@@ -106,6 +141,5 @@ public class Service implements IService {
     @Override
     public void logout(Observer client) {
         loggedClients.values().remove(client);
-        loggedTypesOfUsers.values().remove(client);
     }
 }

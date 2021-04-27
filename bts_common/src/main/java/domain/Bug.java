@@ -8,7 +8,7 @@ import javax.persistence.*;
 import javax.persistence.Entity;
 
 @Entity(name = "Bug")
-@Table(name = "Bugs", indexes = { @Index(name = "IDX_BugStatus", columnList = "status"), @Index(name = "IDX_BugProgrammer", columnList = "tester_id") })
+@Table(name = "Bugs")
 public class Bug extends domain.Entity<Long> {
 
     private String name;
@@ -20,6 +20,10 @@ public class Bug extends domain.Entity<Long> {
     private BugStatus status;
 
     public Bug() {
+    }
+
+    public Bug(long id) {
+        setId(id);
     }
 
     public Bug(long id, String name, String description, LocalDateTime reportDate, LocalDateTime fixDate, User tester, User programmer, BugStatus status) {
@@ -47,6 +51,14 @@ public class Bug extends domain.Entity<Long> {
         this.description = description;
         this.reportDate = reportDate;
         this.tester = tester;
+    }
+
+    public Bug(String name, String description, LocalDateTime reportDate, User tester, BugStatus status) {
+        this.name = name;
+        this.description = description;
+        this.reportDate = reportDate;
+        this.tester = tester;
+        this.status = status;
     }
 
     @Override
@@ -104,18 +116,18 @@ public class Bug extends domain.Entity<Long> {
         return reportDate;
     }
 
-    @Column(name = "fix_date", nullable = false)
+    @Column(name = "fix_date")
     public LocalDateTime getFixDate() {
         return fixDate;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinColumn(name = "tester_id", nullable = false)
     public User getTester() {
         return tester;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinColumn(name = "programmer_id")
     public User getProgrammer() {
         return programmer;

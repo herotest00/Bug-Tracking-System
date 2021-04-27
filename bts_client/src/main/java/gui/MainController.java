@@ -1,9 +1,11 @@
 package gui;
 
+import constants.ActionType;
 import constants.UserType;
 import domain.Bug;
 import domain.Message;
 import domain.User;
+import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 import observer.Observer;
@@ -13,6 +15,8 @@ import utils.AppContext;
 import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.time.LocalDateTime;
+import java.util.List;
 
 public class MainController extends UnicastRemoteObject implements Observer, Serializable {
 
@@ -53,8 +57,12 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
     }
 
     @Override
-    public void updateBugs(Bug bug) throws RemoteException {
-
+    public void updateBugs(Bug bug, ActionType actionType) throws RemoteException {
+        switch (actionType) {
+            case ADD -> Platform.runLater(() -> bugs.add(bug));
+            case UPDATE -> Platform.runLater(() -> bugs.set(bugs.indexOf(bug), bug));
+            case REMOVE -> Platform.runLater(() -> bugs.remove(bug));
+        }
     }
 
     @Override
@@ -64,5 +72,21 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
 
     public void setBugsList(ObservableList<Bug> bugs) {
         this.bugs = bugs;
+    }
+
+    public List<User> findAllUsers() {
+        return service.findAllUsers();
+    }
+
+    public List<Bug> findBugsForProgrammer(long id) {
+        return service.findAllBugsForProgrammer(id);
+    }
+
+    public void reportBug(User user, String name, String description) {
+        service.reportBug(user, name, description, LocalDateTime.now());
+    }
+
+    public void deleteBug(long id) {
+        service.deleteBug(id);
     }
 }

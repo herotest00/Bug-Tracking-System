@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import java.time.LocalDateTime;
 
 @Entity(name = "Message")
-@Table(name = "Messages", indexes = { @Index(name = "IDX_Message", columnList = "bug")})
+@Table(name = "Messages")
 public class Message extends domain.Entity<Long> {
 
     private String messsage;
