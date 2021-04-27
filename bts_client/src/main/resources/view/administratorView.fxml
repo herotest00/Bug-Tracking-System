@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AdministratorController">
    <children>
-      <ListView fx:id="usersTable" layoutX="15.0" layoutY="15.0" prefHeight="324.0" prefWidth="239.0" />
+      <ListView fx:id="usersList" layoutX="15.0" layoutY="15.0" prefHeight="324.0" prefWidth="239.0" />
       <Label layoutX="300.0" layoutY="43.0" text="Username">
          <font>
             <Font size="16.0" />
@@ -26,6 +26,6 @@
       <Button layoutX="465.0" layoutY="188.0" mnemonicParsing="false" onAction="#addButtonTriggered" prefHeight="25.0" prefWidth="75.0" text="Add" />
       <Button layoutX="97.0" layoutY="348.0" mnemonicParsing="false" onAction="#deleteButtonTriggered" prefHeight="25.0" prefWidth="75.0" text="Delete" />
       <Button layoutX="502.0" layoutY="348.0" mnemonicParsing="false" onAction="#logoutButtonTriggered" prefHeight="25.0" prefWidth="75.0" text="Logout" />
-      <ComboBox fx:id="userComboBox" layoutX="386.0" layoutY="141.0" prefWidth="150.0" promptText="User type" />
+      <ComboBox fx:id="userTypeComboBox" layoutX="386.0" layoutY="141.0" prefWidth="150.0" promptText="User type" />
    </children>
 </AnchorPane>

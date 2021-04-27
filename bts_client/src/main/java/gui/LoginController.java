@@ -4,6 +4,7 @@ import constants.UserType;
 import domain.User;
 import domain.validator.ValidationException;
 import exceptions.RepoException;
+import exceptions.ServiceException;
 import gui.utils.SceneManager;
 import gui.utils.enums.Scenes;
 import javafx.fxml.FXML;
@@ -39,7 +40,7 @@ public class LoginController implements Controller {
             User user = mainController.login(username, password);
             SceneManager.getInstance().changeLayout(Scenes.MAIN, user);
             clearFields();
-        } catch (ValidationException | RepoException e) {
+        } catch (ValidationException | RepoException | ServiceException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }

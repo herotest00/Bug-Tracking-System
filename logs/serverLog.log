@@ -1,8 +1,8 @@
-10 Apr 2021 21:04:38,511 INFO  repo.utils.DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system
-10 Apr 2021 21:04:38,809 WARN  org.springframework.remoting.support.RemoteInvocationTraceInterceptor 90 invoke - Processing of RmiServiceExporter remote call resulted in fatal exception: service.IService.login
+10 Apr 2021 21:04:38,511 INFO  DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system
+10 Apr 2021 21:04:38,809 WARN  org.springframework.remoting.support.RemoteInvocationTraceInterceptor 90 invoke - Processing of RmiServiceExporter remote call resulted in fatal exception: org.bug_tracker.service.IService.login
 exceptions.RepoException: Invalid username/password!
-	at repo.UserDbRepository.login(UserDbRepository.java:59) ~[main/:?]
-	at service.Service.login(Service.java:93) ~[main/:?]
+	at UserDbRepository.login(UserDbRepository.java:59) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:93) ~[main/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -40,4 +40,4 @@ exceptions.RepoException: Invalid username/password!
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
 	at java.lang.Thread.run(Thread.java:832) [?:?]
-10 Apr 2021 21:04:41,419 INFO  repo.utils.DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system
+10 Apr 2021 21:04:41,419 INFO  DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system

@@ -1,4 +1,4 @@
-package service;
+package org.bug_tracker.service;
 
 import constants.BugStatus;
 import constants.UserType;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public interface IService {
 
-    void addUser(String username, String password, UserType type);
+    User addUser(String username, String password, UserType type);
 
     void deleteUser(long id);
 
