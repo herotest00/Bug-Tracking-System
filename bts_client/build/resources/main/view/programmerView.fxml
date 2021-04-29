@@ -2,16 +2,22 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProgrammerController">
    <children>
-      <ListView fx:id="bugsList" layoutX="14.0" layoutY="53.0" prefHeight="333.0" prefWidth="239.0" />
-      <ComboBox fx:id="filterComboBox" layoutX="14.0" layoutY="22.0" prefWidth="150.0" promptText="Filter by status" />
       <ComboBox fx:id="statusComboBox" layoutX="285.0" layoutY="53.0" prefWidth="150.0" promptText="Status" />
       <Button layoutX="465.0" layoutY="53.0" mnemonicParsing="false" onAction="#updateButtonTriggered" prefWidth="75.0" text="Update" />
-      <Button layoutX="285.0" layoutY="348.0" mnemonicParsing="false" prefWidth="75.0" text="Open chat" />
-      <Button layoutX="502.0" layoutY="348.0" mnemonicParsing="false" onAction="#logoutButtonTriggered" prefWidth="75.0" text="Logout" />
+      <TableView fx:id="bugsTable" focusTraversable="false" layoutX="14.0" layoutY="53.0" prefHeight="333.0" prefWidth="239.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" editable="false" prefWidth="144.0" text="Name" />
+          <TableColumn fx:id="statusColumn" editable="false" prefWidth="93.0" text="Status" />
+        </columns>
+      </TableView>
+       <Button layoutX="285.0" layoutY="348.0" mnemonicParsing="false" prefWidth="75.0" text="Open chat" />
+       <Button layoutX="502.0" layoutY="348.0" mnemonicParsing="false" onAction="#logoutButtonTriggered" prefWidth="75.0" text="Logout" />
+       <ComboBox fx:id="filterComboBox" layoutX="14.0" layoutY="22.0" onAction="#filterStatusSelected" prefWidth="150.0" promptText="Filter by status" />
    </children>
 </AnchorPane>

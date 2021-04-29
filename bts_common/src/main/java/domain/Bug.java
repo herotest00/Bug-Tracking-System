@@ -1,6 +1,7 @@
 package domain;
 
 import constants.BugStatus;
+import constants.DateConstants;
 
 import java.time.LocalDateTime;
 
@@ -121,13 +122,13 @@ public class Bug extends domain.Entity<Long> {
         return fixDate;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "tester_id", nullable = false)
     public User getTester() {
         return tester;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "programmer_id")
     public User getProgrammer() {
         return programmer;
@@ -137,5 +138,18 @@ public class Bug extends domain.Entity<Long> {
     @Column(name = "status", nullable = false)
     public BugStatus getStatus() {
         return status;
+    }
+
+    @Override
+    public String toString() {
+        return "Bug{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", reportDate=" + reportDate +
+                ", fixDate=" + fixDate +
+                ", tester=" + tester +
+                ", programmer=" + programmer +
+                ", status=" + status +
+                '}';
     }
 }

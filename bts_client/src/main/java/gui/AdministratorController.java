@@ -31,6 +31,7 @@ public class AdministratorController implements Controller {
     @Override
     public void setUser(User user) {
         this.user = user;
+        mainController.setUser(user);
         users.setAll(mainController.findAllUsers());
     }
 

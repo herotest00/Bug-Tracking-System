@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DetailsController">
+   <children>
+      <Label layoutX="33.0" layoutY="64.0" text="Description">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="232.0" text="Report date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="274.0" text="Fix date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="190.0" text="Reported by">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="316.0" prefHeight="7.0" prefWidth="52.0" text="Fixed by">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="358.0" text="Status">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel" layoutX="192.0" layoutY="29.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="descriptionTextArea" editable="false" layoutX="120.0" layoutY="64.0" prefHeight="113.0" prefWidth="264.0" />
+      <Label fx:id="reportDateLabel" layoutX="120.0" layoutY="232.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="fixDateLabel" layoutX="120.0" layoutY="274.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="fixedByLabel" layoutX="120.0" layoutY="316.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusLabel" layoutX="120.0" layoutY="358.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="reportedByLabel" layoutX="120.0" layoutY="190.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

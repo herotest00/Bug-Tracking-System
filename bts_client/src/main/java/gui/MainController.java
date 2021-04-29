@@ -1,6 +1,7 @@
 package gui;
 
 import constants.ActionType;
+import constants.BugStatus;
 import constants.UserType;
 import domain.Bug;
 import domain.Message;
@@ -20,6 +21,7 @@ import java.util.List;
 
 public class MainController extends UnicastRemoteObject implements Observer, Serializable {
 
+    private User user;
     private final IService service;
     private static MainController mainController = null;
     private ObservableList<Bug> bugs;
@@ -59,8 +61,32 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
     @Override
     public void updateBugs(Bug bug, ActionType actionType) throws RemoteException {
         switch (actionType) {
-            case ADD -> Platform.runLater(() -> bugs.add(bug));
-            case UPDATE -> Platform.runLater(() -> bugs.set(bugs.indexOf(bug), bug));
+            case ADD -> Platform.runLater(() -> {
+                if (!bug.getTester().getId().equals(user.getId()) && user.getUserType() == UserType.TESTER)
+                    return;
+                bugs.add(bug);
+            });
+            case UPDATE -> Platform.runLater(() -> {
+                if (bug.getStatus() == BugStatus.OPEN) {
+                    if (!bug.getTester().getId().equals(user.getId()) && user.getUserType() == UserType.TESTER)
+                        return;
+                    bugs.add(bug);
+                }
+                else if (bug.getStatus() == BugStatus.ASSIGNED) {
+                    if (!bug.getProgrammer().getId().equals(user.getId()) && user.getUserType() == UserType.PROGRAMMER) {
+                        var poz = bugs.indexOf(bug);
+                        if (poz != -1)
+                            bugs.set(bugs.indexOf(bug), bug);
+                    }
+                }
+                else {
+                    var poz = bugs.indexOf(bug);
+                    if (bug.getStatus() == BugStatus.DUPLICATE && user.getUserType() == UserType.PROGRAMMER)
+                        bugs.remove(bug);
+                    else if (poz != -1)
+                        bugs.set(bugs.indexOf(bug), bug);
+                }
+            });
             case REMOVE -> Platform.runLater(() -> bugs.remove(bug));
         }
     }
@@ -72,6 +98,10 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
 
     public void setBugsList(ObservableList<Bug> bugs) {
         this.bugs = bugs;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public List<User> findAllUsers() {
@@ -88,5 +118,21 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
 
     public void deleteBug(long id) {
         service.deleteBug(id);
+    }
+
+    public List<Bug> filterBugsByStatusForProgrammer(long id, BugStatus bugStatus) {
+        return service.filterBugsByStatusForProgrammer(id, bugStatus);
+    }
+
+    public List<Bug> filterBugsByStatusForTester(Long id, BugStatus bugStatus) {
+        return service.filterBugsByStatusForTester(id, bugStatus);
+    }
+
+    public void updateBug(Bug bug) {
+        service.updateBug(bug);
+    }
+
+    public List<Bug> findBugsForTester(Long id) {
+        return service.findAllBugsForTester(id);
     }
 }

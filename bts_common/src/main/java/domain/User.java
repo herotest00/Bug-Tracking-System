@@ -79,6 +79,10 @@ public class User extends domain.Entity<Long> {
 
     @Override
     public String toString() {
-        return username + "    " + userType;
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", userType=" + userType +
+                '}';
     }
 }

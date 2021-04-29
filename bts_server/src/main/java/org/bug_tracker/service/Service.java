@@ -83,8 +83,13 @@ public class Service implements IService {
     }
 
     @Override
-    public void updateBug(long id, LocalDateTime fixDate, User programmer, BugStatus status) {
-
+    public void updateBug(Bug bug) {
+        try {
+            bugRepository.save(bug);
+            updateBugsForClients(bug, ActionType.UPDATE);
+        } catch (Exception e) {
+            throw new ServiceException(e.getMessage());
+        }
     }
 
     @Override
@@ -105,7 +110,7 @@ public class Service implements IService {
 
     @Override
     public List<Bug> findAllBugsForProgrammer(long id) {
-        return bugRepository.findBugsByProgrammer_Id(id);
+        return bugRepository.findBugsByProgrammer_IdOrStatus(id, BugStatus.OPEN);
     }
 
     @Override
@@ -132,7 +137,8 @@ public class Service implements IService {
     public User login(String username, String password, Observer client) {
         User user = userRepository.findByUsernameAndPassword(username, password);
         if (user != null && user.getUserType() != null) {
-            loggedClients.put(user, client);
+            if (loggedClients.put(user, client) != null)
+                throw new ServiceException("User already logged in!");
         }
         else throw new ServiceException("Invalid username/password!");
         return user;
@@ -140,6 +146,9 @@ public class Service implements IService {
 
     @Override
     public void logout(Observer client) {
-        loggedClients.values().remove(client);
+        System.out.println(loggedClients);
+        if (loggedClients.values().remove(client)) {
+            System.out.println("User logged out!");
+        }
     }
 }

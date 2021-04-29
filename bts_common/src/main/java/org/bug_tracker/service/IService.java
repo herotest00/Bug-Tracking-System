@@ -23,7 +23,7 @@ public interface IService {
 
     //if programmer = null, update status of bug, else update programmer and status = means he tries to fix it
     //if status == fixed, update status and fixDate (check in controller that programmer is the one that the bug is assigned to)
-    void updateBug(long id, LocalDateTime fixDate, User programmer, BugStatus status);
+    void updateBug(Bug bug);
 
     //validate in controller if id_tester == id who wants to delete the bug
     void deleteBug(long id);
