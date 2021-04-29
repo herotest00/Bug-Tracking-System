@@ -141,6 +141,11 @@ public class Bug extends domain.Entity<Long> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
     public String toString() {
         return "Bug{" +
                 "name='" + name + '\'' +

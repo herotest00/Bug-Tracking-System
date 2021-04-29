@@ -62,30 +62,13 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
     public void updateBugs(Bug bug, ActionType actionType) throws RemoteException {
         switch (actionType) {
             case ADD -> Platform.runLater(() -> {
-                if (!bug.getTester().getId().equals(user.getId()) && user.getUserType() == UserType.TESTER)
-                    return;
+                bugs.remove(bug);
                 bugs.add(bug);
             });
             case UPDATE -> Platform.runLater(() -> {
-                if (bug.getStatus() == BugStatus.OPEN) {
-                    if (!bug.getTester().getId().equals(user.getId()) && user.getUserType() == UserType.TESTER)
-                        return;
-                    bugs.add(bug);
-                }
-                else if (bug.getStatus() == BugStatus.ASSIGNED) {
-                    if (!bug.getProgrammer().getId().equals(user.getId()) && user.getUserType() == UserType.PROGRAMMER) {
-                        var poz = bugs.indexOf(bug);
-                        if (poz != -1)
-                            bugs.set(bugs.indexOf(bug), bug);
-                    }
-                }
-                else {
-                    var poz = bugs.indexOf(bug);
-                    if (bug.getStatus() == BugStatus.DUPLICATE && user.getUserType() == UserType.PROGRAMMER)
-                        bugs.remove(bug);
-                    else if (poz != -1)
-                        bugs.set(bugs.indexOf(bug), bug);
-                }
+                var poz = bugs.indexOf(bug);
+                if (poz != -1)
+                    bugs.set(poz, bug);
             });
             case REMOVE -> Platform.runLater(() -> bugs.remove(bug));
         }

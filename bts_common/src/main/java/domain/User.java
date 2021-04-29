@@ -78,6 +78,11 @@ public class User extends domain.Entity<Long> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
     public String toString() {
         return "User{" +
                 "username='" + username + '\'' +

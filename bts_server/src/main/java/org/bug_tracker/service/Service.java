@@ -68,12 +68,57 @@ public class Service implements IService {
     }
 
     private void updateBugsForClients(Bug bug, ActionType actionType) {
+        System.out.println(bug);
+        System.out.println(bug.getStatus());
+        System.out.println(bug.getTester());
+        if (bug.getProgrammer() != null)
+            System.out.println(bug.getProgrammer());
         for (Map.Entry<User, Observer> entry : loggedClients.entrySet()) {
             User user = entry.getKey();
             if (user.getUserType() != UserType.ADMINISTRATOR) {
                 Observer client = entry.getValue();
                 try {
-                    client.updateBugs(bug, actionType);
+                    switch (actionType) {
+                        case UPDATE -> {
+                            switch (bug.getStatus()) {
+                                case OPEN -> {
+                                    if (bug.getTester().equals(user)) {
+                                        client.updateBugs(bug, actionType);
+                                    } else if (user.getUserType() == UserType.PROGRAMMER) {
+                                        client.updateBugs(bug, ActionType.ADD);
+                                    }
+                                }
+                                case FIXED, CLOSED -> {
+                                    if (bug.getProgrammer().equals(user) || bug.getTester().equals(user)) {
+                                        client.updateBugs(bug, actionType);
+                                    }
+                                }
+                                case DUPLICATE -> {
+                                    if (bug.getProgrammer() != null && bug.getProgrammer().equals(user)) {
+                                        client.updateBugs(bug, ActionType.REMOVE);
+                                    } else if (bug.getTester().equals(user)) {
+                                        client.updateBugs(bug, actionType);
+                                    } else {
+                                        client.updateBugs(bug, ActionType.REMOVE);
+                                    }
+                                }
+                                case ASSIGNED -> {
+                                    System.out.println("ASSIGNED");
+                                    if (bug.getTester().equals(user) || bug.getProgrammer().equals(user)) {
+                                        System.out.println(user);
+                                        client.updateBugs(bug, actionType);
+                                    } else {
+                                        user.getId();
+                                        client.updateBugs(bug, ActionType.REMOVE);
+                                    }
+                                }
+                            }
+                        } case ADD, REMOVE -> {
+                            if (bug.getTester().equals(user) || user.getUserType() == UserType.PROGRAMMER) {
+                                client.updateBugs(bug, actionType);
+                            }
+                        }
+                    }
                 } catch (RemoteException e) {
                     System.out.println("Error updating bug for " + user.getUsername());
                     System.out.println(e.getMessage());
