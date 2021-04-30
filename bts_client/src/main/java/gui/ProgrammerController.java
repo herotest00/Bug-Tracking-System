@@ -29,18 +29,21 @@ public class ProgrammerController implements Controller {
     @FXML private ComboBox<BugStatus> filterComboBox, statusComboBox;
     private User user;
     private final MainController mainController = MainController.getMainController();
-    ObservableList<Bug> bugs = FXCollections.observableArrayList();
+    ObservableList<Bug> allBugs = FXCollections.observableArrayList();
+    ObservableList<Bug> filteredBugs = FXCollections.observableArrayList();
 
     @FXML
     void initialize() {
-        bugsTable.setItems(bugs);
+        bugsTable.setItems(allBugs);
         bugsTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
-        mainController.setBugsList(bugs);
+        mainController.setBugsList(allBugs);
         filterComboBox.setItems(FXCollections.observableArrayList(BugStatus.ALL, BugStatus.OPEN, BugStatus.ASSIGNED, BugStatus.FIXED, BugStatus.CLOSED));
         filterComboBox.getSelectionModel().select(BugStatus.ALL);
         statusComboBox.setItems(FXCollections.observableArrayList(BugStatus.ASSIGNED, BugStatus.FIXED, BugStatus.DUPLICATE));
+        nameColumn.setStyle("-fx-alignment: CENTER;");
+        statusColumn.setStyle("-fx-alignment: CENTER; ");
 
         bugsTable.setOnMouseClicked(new EventHandler<>() {
             @Override
@@ -67,8 +70,8 @@ public class ProgrammerController implements Controller {
     public void setUser(User user) {
         this.user = user;
         mainController.setUser(user);
-        bugs.setAll(mainController.findBugsForProgrammer(user.getId()));
-        mainController.setBugsList(bugs);
+        allBugs.setAll(mainController.findBugsForProgrammer(user.getId()));
+        mainController.setBugsList(allBugs);
     }
 
     public void updateButtonTriggered() {
@@ -120,8 +123,12 @@ public class ProgrammerController implements Controller {
     public void filterStatusSelected() {
         BugStatus bugStatus = filterComboBox.getValue();
         if (bugStatus != null )
-            if (bugStatus != BugStatus.ALL)
-                bugs.setAll(mainController.filterBugsByStatusForProgrammer(user.getId(), bugStatus));
-            else bugs.setAll(mainController.findBugsForProgrammer(user.getId()));
+            if (bugStatus != BugStatus.ALL) {
+                filteredBugs.setAll(mainController.filterBugsByStatusForProgrammer(user.getId(), bugStatus));
+                bugsTable.setItems(filteredBugs);
+            }
+            else {
+                bugsTable.setItems(allBugs);
+            }
     }
 }

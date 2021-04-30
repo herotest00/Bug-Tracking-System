@@ -14,5 +14,5 @@ public interface BugRepository extends JpaRepository<Bug, Long> {
 
     List<Bug> findBugsByStatusAndTester_Id(BugStatus status, long id);
 
-    List<Bug> findBugsByStatusAndProgrammer_Id(BugStatus status, long id);
+    List<Bug> findBugsByStatusOrProgrammer_Id(BugStatus status, long id);
 }

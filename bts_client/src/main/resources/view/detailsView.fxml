@@ -42,7 +42,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="descriptionTextArea" editable="false" layoutX="120.0" layoutY="64.0" prefHeight="113.0" prefWidth="264.0" />
+      <TextArea fx:id="descriptionTextArea" editable="false" focusTraversable="false" layoutX="120.0" layoutY="64.0" prefHeight="113.0" prefWidth="264.0" wrapText="true" />
       <Label fx:id="reportDateLabel" layoutX="120.0" layoutY="232.0" text="Label">
          <font>
             <Font size="14.0" />

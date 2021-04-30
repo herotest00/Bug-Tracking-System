@@ -11,21 +11,28 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class AdministratorController implements Controller {
 
-    private MainController mainController = MainController.getMainController();
-    private ObservableList<User> users = FXCollections.observableArrayList();
-    @FXML private ListView<User> usersList;
+    @FXML private TableView<User> usersTable;
+    @FXML private TableColumn<User, String> usernameColumn;
+    @FXML private TableColumn<User, UserType> userTypeColumn;
+    private final MainController mainController = MainController.getMainController();
+    private final ObservableList<User> users = FXCollections.observableArrayList();
     @FXML private ComboBox<UserType> userTypeComboBox;
     @FXML private TextField passwordTextField, usernameTextField;
     private User user;
 
     @FXML
     void initialize() {
+        usersTable.setItems(users);
+        usersTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        usernameColumn.setCellValueFactory(new PropertyValueFactory<>("username"));
+        userTypeColumn.setCellValueFactory(new PropertyValueFactory<>("userType"));
         userTypeComboBox.setItems(FXCollections.observableArrayList(UserType.values()));
-        usersList.setItems(users);
-        usersList.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        usernameColumn.setStyle("-fx-alignment: CENTER;");
+        userTypeColumn.setStyle("-fx-alignment: CENTER; ");
     }
 
     @Override
@@ -60,7 +67,7 @@ public class AdministratorController implements Controller {
     }
 
     public void deleteButtonTriggered() {
-        User user = usersList.getSelectionModel().getSelectedItem();
+        User user = usersTable.getSelectionModel().getSelectedItem();
         if (user == null) {
             new Alert(Alert.AlertType.ERROR, "Select a user!");
             return;

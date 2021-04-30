@@ -68,11 +68,7 @@ public class Service implements IService {
     }
 
     private void updateBugsForClients(Bug bug, ActionType actionType) {
-        System.out.println(bug);
-        System.out.println(bug.getStatus());
-        System.out.println(bug.getTester());
-        if (bug.getProgrammer() != null)
-            System.out.println(bug.getProgrammer());
+        System.out.println("BUG: " + bug);
         for (Map.Entry<User, Observer> entry : loggedClients.entrySet()) {
             User user = entry.getKey();
             if (user.getUserType() != UserType.ADMINISTRATOR) {
@@ -108,7 +104,6 @@ public class Service implements IService {
                                         System.out.println(user);
                                         client.updateBugs(bug, actionType);
                                     } else {
-                                        user.getId();
                                         client.updateBugs(bug, ActionType.REMOVE);
                                     }
                                 }
@@ -165,7 +160,7 @@ public class Service implements IService {
 
     @Override
     public List<Bug> filterBugsByStatusForProgrammer(long id, BugStatus status) {
-        return bugRepository.findBugsByStatusAndProgrammer_Id(status, id);
+        return bugRepository.findBugsByStatusOrProgrammer_Id(status, id);
     }
 
     @Override
