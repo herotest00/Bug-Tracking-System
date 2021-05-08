@@ -160,16 +160,18 @@ public class Service implements IService {
 
     @Override
     public List<Bug> filterBugsByStatusForProgrammer(long id, BugStatus status) {
-        return bugRepository.findBugsByStatusOrProgrammer_Id(status, id);
+        if (status == BugStatus.OPEN)
+            return bugRepository.findBugsByStatus(status);
+        return bugRepository.findBugsByStatusAndProgrammer_Id(status, id);
     }
 
     @Override
-    public void sendMessage(User sender, Bug bug, LocalDateTime sendDate) {
+    public void sendMessage(String text, User sender, Bug bug, LocalDateTime sendDate) {
 
     }
 
     @Override
-    public List<Message> findAllMessages(long id) {
+    public List<Message> findMessagesForBug(Long id) {
         return null;
     }
 

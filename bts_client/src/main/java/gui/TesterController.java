@@ -152,4 +152,7 @@ public class TesterController implements Controller {
                 bugsTable.setItems(allBugs);
             }
     }
+
+    public void openChatButtonTriggered() {
+    }
 }

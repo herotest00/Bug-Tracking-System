@@ -39,10 +39,10 @@ public interface IService {
 
     List<Bug> filterBugsByStatusForProgrammer(long id, BugStatus status);
 
-    void sendMessage(User sender, Bug bug, LocalDateTime sendDate);
+    void sendMessage(String text, User sender, Bug bug, LocalDateTime sendDate);
 
     //chronological order
-    List<Message> findAllMessages(long id);
+    List<Message> findMessagesForBug(Long id);
 
     User login(String username, String password, Observer client);
 

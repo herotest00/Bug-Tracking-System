@@ -17,6 +17,8 @@ import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MainController extends UnicastRemoteObject implements Observer, Serializable {
@@ -25,6 +27,7 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
     private final IService service;
     private static MainController mainController = null;
     private ObservableList<Bug> bugs;
+    private final HashMap<Bug, ArrayList<ChatController>> messages = new HashMap<>();
 
     private MainController() throws RemoteException {
         service = (IService) AppContext.getApplicationContext().getBean("org.bug_tracker.service");
@@ -120,5 +123,20 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
 
     public List<Bug> findBugsForTester(Long id) {
         return service.findAllBugsForTester(id);
+    }
+
+    public List<Message> findMessagesForBug(Long id) {
+        return service.findMessagesForBug(id);
+    }
+
+    public void sendMessage(String text, User user, Bug bug) {
+        service.sendMessage(text, user, bug, LocalDateTime.now());
+    }
+
+    public void setMessagesList(Bug bug, ChatController chatController) {
+        if (!messages.containsKey(bug)) {
+            messages.put(bug, new ArrayList<>());
+        }
+        messages.get(bug).add(chatController);
     }
 }

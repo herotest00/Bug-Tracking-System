@@ -32,6 +32,7 @@ public class ProgrammerController implements Controller {
     ObservableList<Bug> allBugs = FXCollections.observableArrayList();
     ObservableList<Bug> filteredBugs = FXCollections.observableArrayList();
 
+
     @FXML
     void initialize() {
         bugsTable.setItems(allBugs);
@@ -130,5 +131,8 @@ public class ProgrammerController implements Controller {
             else {
                 bugsTable.setItems(allBugs);
             }
+    }
+
+    public void openChatButtonTriggered() {
     }
 }

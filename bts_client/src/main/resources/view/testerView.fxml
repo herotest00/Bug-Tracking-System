@@ -34,7 +34,7 @@
          </columns>
       </TableView>
       <Button layoutX="96.0" layoutY="348.0" mnemonicParsing="false" onAction="#removeButtonTriggered" prefWidth="75.0" text="Remove" />
-      <Button layoutX="285.0" layoutY="348.0" mnemonicParsing="false" prefWidth="75.0" text="Open chat" />
+      <Button layoutX="285.0" layoutY="348.0" mnemonicParsing="false" onAction="#openChatButtonTriggered" prefWidth="75.0" text="Open chat" />
       <Button layoutX="502.0" layoutY="348.0" mnemonicParsing="false" onAction="#logoutButtonTriggered" prefWidth="75.0" text="Logout" />
       <ComboBox fx:id="filterComboBox" layoutX="14.0" layoutY="20.0" onAction="#filterStatusSelected" prefWidth="150.0" promptText="Filter by status" />
    </children>
