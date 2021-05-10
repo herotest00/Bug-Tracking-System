@@ -27,7 +27,7 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
     private final IService service;
     private static MainController mainController = null;
     private ObservableList<Bug> bugs;
-    private final HashMap<Bug, ArrayList<ChatController>> messages = new HashMap<>();
+    private final HashMap<Bug, ArrayList<ObservableList<Message>>> chats = new HashMap<>();
 
     private MainController() throws RemoteException {
         service = (IService) AppContext.getApplicationContext().getBean("org.bug_tracker.service");
@@ -82,7 +82,12 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
 
     @Override
     public void updateMessages(Message message) throws RemoteException {
-
+        ArrayList<ObservableList<Message>> lists = chats.get(message.getBug());
+        if (lists != null) {
+            Platform.runLater(() -> {
+                lists.forEach(list -> list.add(message));
+            });
+        }
     }
 
     public void setBugsList(ObservableList<Bug> bugs) {
@@ -133,10 +138,19 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
         service.sendMessage(text, user, bug, LocalDateTime.now());
     }
 
-    public void setMessagesList(Bug bug, ChatController chatController) {
-        if (!messages.containsKey(bug)) {
-            messages.put(bug, new ArrayList<>());
+    public void setMessagesList(Bug bug, ObservableList<Message> list) {
+        System.out.println(chats);
+        if (!chats.containsKey(bug)) {
+            chats.put(bug, new ArrayList<>());
         }
-        messages.get(bug).add(chatController);
+        chats.get(bug).add(list);
+        System.out.println(chats);
+    }
+
+    public void removeChat(Bug bug, ObservableList<Message> list) {
+        var lists = chats.get(bug);
+        if (lists != null) {
+            lists.remove(list);
+        }
     }
 }

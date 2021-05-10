@@ -4,6 +4,7 @@ import constants.BugStatus;
 import domain.Bug;
 import domain.User;
 import exceptions.ServiceException;
+import gui.utils.SceneInitializer;
 import gui.utils.SceneManager;
 import gui.utils.enums.Scenes;
 import javafx.collections.FXCollections;
@@ -46,23 +47,16 @@ public class TesterController implements Controller {
         nameColumn.setStyle("-fx-alignment: CENTER;");
         statusColumn.setStyle("-fx-alignment: CENTER; ");
 
-        bugsTable.setOnMouseClicked(new EventHandler<>() {
-            @Override
-            public void handle(MouseEvent event) {
-                try {
-                    if (event.getClickCount() == 2) {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/detailsView.fxml"));
-                        Parent root = loader.load();
-                        DetailsController controller = loader.getController();
-                        controller.setData(bugsTable.getSelectionModel().getSelectedItem());
-                        Stage stage = new Stage();
-                        stage.setTitle("Details");
-                        stage.setScene(new Scene(root));
-                        stage.show();
-                    }
-                } catch (IOException e) {
-                    new Alert(Alert.AlertType.ERROR, "Couldn't open the details window!");
+        bugsTable.setOnMouseClicked(event -> {
+            try {
+                if (event.getClickCount() == 2) {
+                    Stage stage = new Stage();
+                    stage.setTitle("Details");
+                    stage.setScene(new Scene(SceneInitializer.getInstance().loadDetails(bugsTable.getSelectionModel().getSelectedItem())));
+                    stage.show();
                 }
+            } catch (IOException e) {
+                new Alert(Alert.AlertType.ERROR, "Couldn't open the details window!").show();
             }
         });
     }
@@ -154,5 +148,21 @@ public class TesterController implements Controller {
     }
 
     public void openChatButtonTriggered() {
+        Bug bug = bugsTable.getSelectionModel().getSelectedItem();
+        if (bug != null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/chatView.fxml"));
+                Parent root = loader.load();
+                ChatController controller = loader.getController();
+                controller.setUser(user, bug);
+                Stage stage = new Stage();
+                stage.setTitle(bug.getName());
+                stage.setScene(new Scene(root));
+                stage.show();
+                stage.setOnCloseRequest(event -> controller.closeHandler());
+            } catch (IOException e) {
+                new Alert(Alert.AlertType.ERROR, "Couldn't open chat window!").show();
+            }
+        }
     }
 }

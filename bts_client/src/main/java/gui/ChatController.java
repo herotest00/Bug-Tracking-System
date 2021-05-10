@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyCode;
 
 public class ChatController {
 
@@ -22,13 +23,18 @@ public class ChatController {
     @FXML
     void initialize() {
         messagesListView.setItems(messages);
+        messageTextArea.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                sendButtonTriggered();
+            }
+        });
     }
 
     public void setUser(User user, Bug bug) {
         this.user = user;
         this.bug = bug;
         messages.setAll(mainController.findMessagesForBug(bug.getId()));
-        mainController.setMessagesList(bug, this);
+        mainController.setMessagesList(bug, messages);
     }
 
     public void sendButtonTriggered() {
@@ -39,5 +45,10 @@ public class ChatController {
             return;
         }
         mainController.sendMessage(text, user, bug);
+        messageTextArea.clear();
+    }
+
+    public void closeHandler() {
+        mainController.removeChat(bug, messages);
     }
 }

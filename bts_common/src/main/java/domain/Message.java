@@ -44,13 +44,13 @@ public class Message extends domain.Entity<Long> {
         super.setId(aLong);
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "id_sender", nullable = false)
     public User getSender() {
         return sender;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "id_bug", nullable = false)
     public Bug getBug() {
         return bug;
@@ -80,5 +80,10 @@ public class Message extends domain.Entity<Long> {
 
     public void setSendDate(LocalDateTime sendDate) {
         this.sendDate = sendDate;
+    }
+
+    @Override
+    public String toString() {
+        return "[" + sender.getUsername() + "]: " + messsage;
     }
 }

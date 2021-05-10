@@ -99,7 +99,6 @@ public class Service implements IService {
                                     }
                                 }
                                 case ASSIGNED -> {
-                                    System.out.println("ASSIGNED");
                                     if (bug.getTester().equals(user) || bug.getProgrammer().equals(user)) {
                                         System.out.println(user);
                                         client.updateBugs(bug, actionType);
@@ -167,12 +166,29 @@ public class Service implements IService {
 
     @Override
     public void sendMessage(String text, User sender, Bug bug, LocalDateTime sendDate) {
+        Message message = new Message(text, sender, bug, sendDate);
+        messageRepository.save(message);
+        updateMessagesForClients(message);
+    }
 
+    private void updateMessagesForClients(Message message) {
+        System.out.println(message);
+        for (Map.Entry<User, Observer> entry : loggedClients.entrySet()) {
+            User user = entry.getKey();
+            if (user.getUserType() == UserType.PROGRAMMER || user.equals(message.getBug().getTester())) {
+                try {
+                    entry.getValue().updateMessages(message);
+                } catch (RemoteException e) {
+                    System.out.println("Error updating message for " + user.getUsername());
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
     }
 
     @Override
     public List<Message> findMessagesForBug(Long id) {
-        return null;
+        return messageRepository.findMessagesByBug_IdOrderBySendDateAsc(id);
     }
 
     @Override
