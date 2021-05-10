@@ -7,5 +7,11 @@
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mariadb://localhost:3306/charitable_events</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="bug_tracking_system@ellascont.ro" uuid="28c1408c-acd3-4d1e-90b8-a3dae7746e72">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://ellascont.ro:43307/bug_tracking_system</jdbc-url>
+    </data-source>
   </component>
 </project>

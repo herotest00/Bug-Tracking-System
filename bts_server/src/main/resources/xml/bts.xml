@@ -9,34 +9,13 @@
         <prop key="database.password">H3r0T3s70?</prop>
     </util:properties>
 
-    <bean id="userValidator" class="domain.validator.UserValidator"/>
-    <bean id="userRepository" class="repo.UserDbRepository">
-        <constructor-arg ref="userValidator"/>
-        <constructor-arg ref="jdbcProps"/>
-    </bean>
-
-    <bean id="bugValidator" class="domain.validator.BugValidator"/>
-    <bean id="bugRepository" class="repo.BugDbRepository">
-        <constructor-arg ref="bugValidator"/>
-        <constructor-arg ref="jdbcProps"/>
-    </bean>
-
-    <bean id="messageValidator" class="domain.validator.MessageValidator"/>
-    <bean id="messageRepository" class="repo.MessageDbRepository">
-        <constructor-arg ref="messageValidator"/>
-        <constructor-arg ref="jdbcProps"/>
-    </bean>
-
-    <bean id="service" class="service.Service">
-        <constructor-arg ref="userRepository"/>
-        <constructor-arg ref="bugRepository"/>
-        <constructor-arg ref="messageRepository"/>
+    <bean id="service" class="org.bug_tracker.service.Service">
     </bean>
 
     <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
         <property name="serviceName" value="service"/>
         <property name="service" ref="service"/>
-        <property name="serviceInterface" value="service.IService"/>
+        <property name="serviceInterface" value="org.bug_tracker.service.IService"/>
         <property name="servicePort" value="1099"/>
     </bean>
 </beans>

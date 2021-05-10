@@ -1,0 +1,1214 @@
+18 Apr 2021 11:46:57,311 INFO  DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system
+18 Apr 2021 11:47:24,394 INFO  DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system
+19 Apr 2021 19:21:43,763 INFO  DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system
+19 Apr 2021 19:21:44,121 WARN  org.springframework.remoting.support.RemoteInvocationTraceInterceptor 90 invoke - Processing of RmiServiceExporter remote call resulted in fatal exception: org.bug_tracker.service.IService.login
+exceptions.RepoException: Invalid username/password!
+	at UserDbRepository.login(UserDbRepository.java:59) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy20.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+19 Apr 2021 19:21:51,834 INFO  DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system
+19 Apr 2021 19:22:09,519 INFO  DBUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://ellascont.ro:43307/bug_tracking_system
+19 Apr 2021 22:55:17,206 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+19 Apr 2021 22:55:17,868 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+19 Apr 2021 22:55:18,147 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+19 Apr 2021 22:55:18,151 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+19 Apr 2021 22:55:18,152 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+19 Apr 2021 22:55:18,152 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+19 Apr 2021 22:55:18,155 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+19 Apr 2021 22:55:18,584 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+19 Apr 2021 22:55:19,496 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3e4e8fdf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+19 Apr 2021 22:55:20,496 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19 Apr 2021 22:56:21,449 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+19 Apr 2021 22:56:22,392 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+19 Apr 2021 22:56:22,674 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+19 Apr 2021 22:56:22,678 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+19 Apr 2021 22:56:22,679 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+19 Apr 2021 22:56:22,680 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+19 Apr 2021 22:56:22,685 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+19 Apr 2021 22:56:23,123 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+19 Apr 2021 22:56:24,068 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3e4e8fdf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+19 Apr 2021 22:56:24,249 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19 Apr 2021 22:57:56,341 ERROR UserHibernateRepository 33 login - org.hibernate.hql.internal.ast.QuerySyntaxException: User is not mapped [select u.name, u.password, ut.type from User as u inner join UserType where username = :username and password = :password]
+20 Apr 2021 00:07:38,739 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 00:07:39,109 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 00:07:39,272 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 00:07:39,272 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 00:07:39,272 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 00:07:39,272 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 00:07:39,272 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 00:07:39,976 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 00:07:40,822 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3e4e8fdf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 00:07:41,021 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 00:07:51,275 ERROR UserHibernateRepository 33 login - org.hibernate.hql.internal.ast.QuerySyntaxException: User is not mapped [from User where username = :username and password = :password]
+20 Apr 2021 00:08:43,244 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 00:08:43,592 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 00:08:43,746 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 00:08:43,746 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 00:08:43,746 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 00:08:43,746 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 00:08:43,761 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 00:08:44,078 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 00:08:44,796 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73c3cd09] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 00:08:54,292 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 00:16:38,862 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 00:16:39,217 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 00:16:39,364 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 00:16:39,380 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 00:16:39,380 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 00:16:39,380 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 00:16:39,380 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 00:16:39,909 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 00:16:40,725 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3c66b7d8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 00:16:40,884 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 00:32:18,196 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 00:32:18,635 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 00:32:18,814 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 00:32:18,814 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 00:32:18,814 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 00:32:18,814 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 00:32:18,814 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 00:32:20,489 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 00:32:21,911 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@705a8dbc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 00:32:22,219 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 00:41:43,813 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 00:41:44,171 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 00:41:44,333 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 00:41:44,333 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 00:41:44,333 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 00:41:44,333 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 00:41:44,333 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 00:41:45,114 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 00:41:46,256 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@40729f01] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 00:41:46,398 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 00:43:28,665 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 00:43:29,081 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 00:43:29,244 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 00:43:29,244 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 00:43:29,244 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 00:43:29,244 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 00:43:29,244 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 00:43:29,868 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 00:43:30,615 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@40729f01] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 00:43:30,804 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 00:44:24,610 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 00:44:25,095 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 00:44:25,308 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 00:44:25,308 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 00:44:25,308 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 00:44:25,308 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 00:44:25,318 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 00:44:25,919 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 00:44:26,989 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@d535a3d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 00:44:27,214 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:01:47,608 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:01:47,989 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:01:48,152 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:01:48,154 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:01:48,155 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:01:48,155 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:01:48,158 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:01:48,650 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:01:49,678 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@f5cf29b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:01:49,903 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:02:01,020 ERROR UserHibernateRepository 35 login - org.hibernate.QueryException: could not resolve property: id_user_type of: domain.User [select u from domain.User as u inner join u.id_user_type where u.username = :username and u.password = :password]
+20 Apr 2021 09:07:56,199 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:07:56,648 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:07:56,824 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:07:56,827 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:07:56,827 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:07:56,827 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:07:56,829 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:07:57,176 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:07:58,004 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5cbd94b2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:07:58,251 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:10:36,104 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:10:36,565 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:10:36,774 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:10:36,777 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:10:36,778 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:10:36,778 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:10:36,780 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:10:37,138 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:10:37,853 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6824b913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:10:38,047 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:10:54,732 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:10:55,114 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:10:55,288 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:10:55,290 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:10:55,291 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:10:55,291 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:10:55,293 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:10:55,623 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:10:56,425 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6824b913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:10:56,610 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:13:17,240 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:13:17,592 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:13:17,761 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:13:17,763 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:13:17,764 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:13:17,764 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:13:17,767 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:13:18,082 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:13:18,801 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5cbd94b2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:13:18,987 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:13:33,840 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError -  Path expected for join!
+20 Apr 2021 09:13:33,840 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError -  Path expected for join!
+antlr.SemanticException: Path expected for join!
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.createFromJoinElement(HqlSqlWalker.java:401) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.joinElement(HqlSqlBaseWalker.java:3990) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElement(HqlSqlBaseWalker.java:3776) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElementList(HqlSqlBaseWalker.java:3654) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromClause(HqlSqlBaseWalker.java:737) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:593) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:13:33,853 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError -  Invalid path: 'UT.type'
+20 Apr 2021 09:13:33,853 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError -  Invalid path: 'UT.type'
+org.hibernate.hql.internal.ast.InvalidPathException: Invalid path: 'UT.type'
+	at org.hibernate.hql.internal.ast.util.LiteralProcessor.lookupConstant(LiteralProcessor.java:111) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:219) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:109) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:104) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolveSelectExpression(DotNode.java:770) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.resolveSelectExpression(HqlSqlWalker.java:1067) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectExpr(HqlSqlBaseWalker.java:2324) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectExprList(HqlSqlBaseWalker.java:2261) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectClause(HqlSqlBaseWalker.java:1523) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:602) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:13:33,860 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError -  Invalid path: 'u.username'
+20 Apr 2021 09:13:33,860 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError -  Invalid path: 'u.username'
+org.hibernate.hql.internal.ast.InvalidPathException: Invalid path: 'u.username'
+	at org.hibernate.hql.internal.ast.util.LiteralProcessor.lookupConstant(LiteralProcessor.java:111) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:219) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.resolve(HqlSqlWalker.java:1055) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.expr(HqlSqlBaseWalker.java:1308) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.exprOrSubquery(HqlSqlBaseWalker.java:4778) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.comparisonExpr(HqlSqlBaseWalker.java:4244) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2166) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2091) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.whereClause(HqlSqlBaseWalker.java:832) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:626) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:13:33,862 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError - <AST>:0:0: unexpected end of subtree
+20 Apr 2021 09:13:33,863 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError - <AST>:0:0: unexpected end of subtree
+antlr.NoViableAltException: unexpected end of subtree
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.exprOrSubquery(HqlSqlBaseWalker.java:4860) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.comparisonExpr(HqlSqlBaseWalker.java:4247) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2166) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2091) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.whereClause(HqlSqlBaseWalker.java:832) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:626) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:13:33,865 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError -  left-hand operand of a binary operator was null
+20 Apr 2021 09:13:33,866 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError -  left-hand operand of a binary operator was null
+antlr.SemanticException: left-hand operand of a binary operator was null
+	at org.hibernate.hql.internal.ast.tree.BinaryLogicOperatorNode.initialize(BinaryLogicOperatorNode.java:41) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.prepareLogicOperator(HqlSqlWalker.java:1478) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.comparisonExpr(HqlSqlBaseWalker.java:4719) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2166) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2091) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.whereClause(HqlSqlBaseWalker.java:832) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:626) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:13:33,868 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError - <AST>:0:0: unexpected end of subtree
+20 Apr 2021 09:13:33,868 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError - <AST>:0:0: unexpected end of subtree
+antlr.NoViableAltException: unexpected end of subtree
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2174) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2094) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.whereClause(HqlSqlBaseWalker.java:832) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:626) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:13:33,881 ERROR UserHibernateRepository 35 login - org.hibernate.hql.internal.ast.QuerySyntaxException: Path expected for join! [SELECT U.id, U.username, U.password, UT.type FROM domain.User AS U INNER JOIN UserType AS UT ON U.id_user_type = UT.id WHERE u.username = :username AND u.password = :password]
+20 Apr 2021 09:14:18,854 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:14:19,271 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:14:19,437 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:14:19,440 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:14:19,441 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:14:19,441 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:14:19,444 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:14:19,785 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:14:20,930 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6824b913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:14:21,146 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:14:53,639 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError -  Path expected for join!
+20 Apr 2021 09:14:53,641 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError -  Path expected for join!
+antlr.SemanticException: Path expected for join!
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.createFromJoinElement(HqlSqlWalker.java:401) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.joinElement(HqlSqlBaseWalker.java:3990) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElement(HqlSqlBaseWalker.java:3776) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElementList(HqlSqlBaseWalker.java:3654) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromClause(HqlSqlBaseWalker.java:737) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:593) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:14:53,704 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError -  Invalid path: 'UT.type'
+20 Apr 2021 09:14:53,705 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError -  Invalid path: 'UT.type'
+org.hibernate.hql.internal.ast.InvalidPathException: Invalid path: 'UT.type'
+	at org.hibernate.hql.internal.ast.util.LiteralProcessor.lookupConstant(LiteralProcessor.java:111) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:219) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:109) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:104) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolveSelectExpression(DotNode.java:770) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.resolveSelectExpression(HqlSqlWalker.java:1067) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectExpr(HqlSqlBaseWalker.java:2324) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectExprList(HqlSqlBaseWalker.java:2261) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectClause(HqlSqlBaseWalker.java:1523) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:602) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:14:53,737 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError -  Invalid path: 'u.username'
+20 Apr 2021 09:14:53,737 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError -  Invalid path: 'u.username'
+org.hibernate.hql.internal.ast.InvalidPathException: Invalid path: 'u.username'
+	at org.hibernate.hql.internal.ast.util.LiteralProcessor.lookupConstant(LiteralProcessor.java:111) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:219) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.resolve(HqlSqlWalker.java:1055) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.expr(HqlSqlBaseWalker.java:1308) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.exprOrSubquery(HqlSqlBaseWalker.java:4778) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.comparisonExpr(HqlSqlBaseWalker.java:4244) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2166) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2091) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.whereClause(HqlSqlBaseWalker.java:832) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:626) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:14:53,750 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError - <AST>:0:0: unexpected end of subtree
+20 Apr 2021 09:14:53,750 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError - <AST>:0:0: unexpected end of subtree
+antlr.NoViableAltException: unexpected end of subtree
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.exprOrSubquery(HqlSqlBaseWalker.java:4860) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.comparisonExpr(HqlSqlBaseWalker.java:4247) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2166) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2091) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.whereClause(HqlSqlBaseWalker.java:832) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:626) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:14:53,762 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError -  left-hand operand of a binary operator was null
+20 Apr 2021 09:14:53,763 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError -  left-hand operand of a binary operator was null
+antlr.SemanticException: left-hand operand of a binary operator was null
+	at org.hibernate.hql.internal.ast.tree.BinaryLogicOperatorNode.initialize(BinaryLogicOperatorNode.java:41) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.prepareLogicOperator(HqlSqlWalker.java:1478) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.comparisonExpr(HqlSqlBaseWalker.java:4719) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2166) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2091) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.whereClause(HqlSqlBaseWalker.java:832) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:626) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:14:53,774 ERROR org.hibernate.hql.internal.ast.ErrorTracker 62 reportError - <AST>:0:0: unexpected end of subtree
+20 Apr 2021 09:14:53,775 ERROR org.hibernate.hql.internal.ast.ErrorTracker 57 reportError - <AST>:0:0: unexpected end of subtree
+antlr.NoViableAltException: unexpected end of subtree
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2174) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2094) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.whereClause(HqlSqlBaseWalker.java:832) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:626) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at UserHibernateRepository.login(UserHibernateRepository.java:31) ~[main/:?]
+	at org.bug_tracker.service.Service.login(Service.java:94) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy49.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.4.jar:5.3.4]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.4.jar:5.3.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:691) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:391) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+20 Apr 2021 09:14:56,970 ERROR UserHibernateRepository 35 login - org.hibernate.hql.internal.ast.QuerySyntaxException: Path expected for join! [SELECT U.id, U.username, U.password, UT.type FROM domain.User AS U INNER JOIN UserType AS UT ON U.id_user_type = UT.id WHERE u.username = :username AND u.password = :password]
+20 Apr 2021 09:21:44,303 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:21:44,653 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:21:44,810 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:21:44,814 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:21:44,814 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:21:44,815 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:21:44,818 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:21:45,124 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:21:45,812 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5cbd94b2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:21:45,988 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:21:59,516 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper 137 logExceptions - SQL Error: 1146, SQLState: 42S02
+20 Apr 2021 09:21:59,516 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper 142 logExceptions - (conn=3469) Table 'bug_tracking_system.UserTypes' doesn't exist
+20 Apr 2021 09:21:59,520 ERROR UserHibernateRepository 40 login - org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+20 Apr 2021 09:22:23,748 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:22:24,149 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:22:24,382 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:22:24,387 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:22:24,388 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:22:24,388 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:22:24,392 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:22:24,938 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:22:25,956 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6824b913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:22:26,121 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:22:56,021 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:22:56,406 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:22:56,584 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:22:56,587 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:22:56,588 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:22:56,588 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:22:56,591 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:22:57,116 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:22:57,873 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6824b913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:22:58,039 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:23:12,824 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper 137 logExceptions - SQL Error: 1146, SQLState: 42S02
+20 Apr 2021 09:23:12,827 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper 142 logExceptions - (conn=3471) Table 'bug_tracking_system.UserTypes' doesn't exist
+20 Apr 2021 09:24:23,347 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:24:23,732 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:24:23,909 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:24:23,912 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:24:23,912 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:24:23,912 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:24:23,915 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:24:24,297 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:24:25,005 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6824b913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:24:25,205 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:24:37,882 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper 137 logExceptions - SQL Error: 1146, SQLState: 42S02
+20 Apr 2021 09:24:37,884 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper 142 logExceptions - (conn=3472) Table 'bug_tracking_system.UserTypes' doesn't exist
+20 Apr 2021 09:24:41,946 ERROR UserHibernateRepository 40 login - org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+20 Apr 2021 09:25:30,495 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:25:30,880 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:25:31,051 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:25:31,053 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:25:31,054 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:25:31,054 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:25:31,056 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:25:31,478 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:25:32,196 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6824b913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:25:32,377 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:25:46,949 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper 137 logExceptions - SQL Error: 1146, SQLState: 42S02
+20 Apr 2021 09:25:46,951 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper 142 logExceptions - (conn=3473) Table 'bug_tracking_system.Usersasd' doesn't exist
+20 Apr 2021 09:26:51,944 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:26:52,508 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:26:52,691 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:26:52,694 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:26:52,695 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:26:52,695 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:26:52,697 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:26:53,203 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:26:54,192 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6824b913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:26:54,817 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:27:08,845 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper 137 logExceptions - SQL Error: 1054, SQLState: 42S22
+20 Apr 2021 09:27:08,848 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper 142 logExceptions - (conn=3477) Unknown column 'u.username' in 'where clause'
+20 Apr 2021 09:27:56,203 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:27:56,819 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:27:57,010 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:27:57,013 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:27:57,014 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:27:57,014 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:27:57,016 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:27:57,647 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:27:58,438 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6824b913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:27:58,652 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:28:09,076 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper 137 logExceptions - SQL Error: 1054, SQLState: 42S22
+20 Apr 2021 09:28:09,079 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper 142 logExceptions - No such column: 'userType'. 'usertype' must be in [u.id, usertypes.type, password, u.password, ut.type, users.username, u.username, users.id, id, users.password, type, username]
+20 Apr 2021 09:30:07,739 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:30:08,118 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:30:08,293 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:30:08,296 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:30:08,296 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:30:08,296 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:30:08,299 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:30:08,701 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:30:09,521 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5cbd94b2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:30:09,883 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:31:29,123 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:31:29,501 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:31:29,675 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:31:29,677 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:31:29,678 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:31:29,679 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:31:29,681 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:31:30,092 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:31:30,929 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5cbd94b2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:31:31,636 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Apr 2021 09:34:59,344 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+20 Apr 2021 09:34:59,682 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Apr 2021 09:34:59,841 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Apr 2021 09:34:59,844 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+20 Apr 2021 09:34:59,844 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+20 Apr 2021 09:34:59,844 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+20 Apr 2021 09:34:59,846 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Apr 2021 09:35:00,171 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+20 Apr 2021 09:35:00,858 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@40729f01] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Apr 2021 09:35:01,156 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:12:18,260 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:12:18,837 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:12:19,062 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:12:19,067 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:12:19,069 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:12:19,069 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:12:19,072 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:12:19,395 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:12:20,258 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@518ddd3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:12:21,427 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:15:32,438 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:15:32,843 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:15:33,023 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:15:33,026 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:15:33,026 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:15:33,027 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:15:33,029 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:15:33,352 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:15:34,238 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@518ddd3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:15:35,169 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:17:05,772 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:17:06,177 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:17:06,361 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:17:06,364 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:17:06,364 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:17:06,365 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:17:06,367 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:17:06,666 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:17:07,506 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@518ddd3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:17:08,329 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:17:40,555 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:17:40,969 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:17:41,163 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:17:41,165 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:17:41,166 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:17:41,166 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:17:41,168 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:17:41,378 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:17:42,328 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@518ddd3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:17:43,137 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:17:43,491 WARN  org.springframework.context.support.AbstractApplicationContext 590 refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.remoting.rmi.RmiServiceExporter#0' defined in class path resource [xml/bts.xml]: Invocation of init method failed; nested exception is java.rmi.server.ExportException: Port already in use: 1099; nested exception is: 
+	java.net.BindException: Address already in use: bind
+26 Apr 2021 18:18:15,608 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:18:16,033 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:18:16,218 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:18:16,222 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:18:16,223 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:18:16,223 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:18:16,227 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:18:16,494 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:18:17,256 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@518ddd3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:18:18,241 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:20:42,306 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:20:42,721 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:20:42,921 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:20:42,926 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:20:42,927 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:20:42,928 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:20:42,933 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:20:43,264 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:20:44,058 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@518ddd3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:20:45,150 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:24:04,789 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:24:05,272 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:24:05,497 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:24:05,500 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:24:05,501 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:24:05,501 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:24:05,503 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:24:05,711 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:24:06,522 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@518ddd3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:24:07,337 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:24:07,669 WARN  org.springframework.context.support.AbstractApplicationContext 590 refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.remoting.rmi.RmiServiceExporter#0' defined in class path resource [xml/bts.xml]: Invocation of init method failed; nested exception is java.rmi.server.ExportException: Port already in use: 1099; nested exception is: 
+	java.net.BindException: Address already in use: bind
+26 Apr 2021 18:32:29,119 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:32:29,531 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:32:29,707 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:32:29,709 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:32:29,710 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:32:29,710 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:32:29,712 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:32:29,920 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:32:30,157 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PoolState 428 stop - HHH10001008: Cleaning up connection pool [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:34:16,788 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:34:17,204 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:34:17,388 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:34:17,391 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:34:17,392 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:34:17,392 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:34:17,395 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:34:17,623 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:34:18,371 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c37f145] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:34:21,780 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:39:44,868 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:39:45,318 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:39:45,507 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:39:45,511 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:39:45,512 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:39:45,512 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:39:45,515 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:39:45,754 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:39:46,496 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c37f145] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:39:49,790 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:41:37,180 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:41:37,830 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:41:38,111 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:41:38,115 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:41:38,116 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:41:38,117 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:41:38,120 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:41:38,430 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:41:39,303 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c37f145] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:41:43,107 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 18:42:18,087 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 18:42:18,606 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 18:42:18,830 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 18:42:18,834 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 18:42:18,834 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 18:42:18,835 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 18:42:18,838 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 18:42:19,131 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 18:42:19,935 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@d675f9f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 18:42:27,885 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 19:03:36,257 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 19:03:36,649 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 19:03:36,826 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 19:03:36,829 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 19:03:36,830 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 19:03:36,830 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 19:03:36,832 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 19:03:37,046 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 19:03:37,722 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@276cc8dc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 19:03:38,255 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 19:04:42,669 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 19:04:43,083 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 19:04:43,274 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 19:04:43,277 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 19:04:43,278 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 19:04:43,278 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 19:04:43,281 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 19:04:43,499 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 19:04:44,307 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@276cc8dc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 19:04:44,770 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 19:05:48,694 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 19:05:49,339 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 19:05:49,630 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 19:05:49,634 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 19:05:49,636 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 19:05:49,637 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 19:05:49,640 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 19:05:49,850 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 19:05:50,693 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@276cc8dc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 19:05:56,899 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26 Apr 2021 19:07:08,080 INFO  org.hibernate.Version 44 logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+26 Apr 2021 19:07:08,506 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager 56 <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26 Apr 2021 19:07:08,689 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 72 configure - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+26 Apr 2021 19:07:08,691 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 115 buildCreator - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://ellascont.ro:43307/bug_tracking_system]
+26 Apr 2021 19:07:08,692 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 124 buildCreator - HHH10001001: Connection properties: {password=****, user=adrian}
+26 Apr 2021 19:07:08,692 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 129 buildCreator - HHH10001003: Autocommit mode: false
+26 Apr 2021 19:07:08,695 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections 259 <init> - HHH000115: Hibernate connection pool size: 20 (min=1)
+26 Apr 2021 19:07:08,927 INFO  org.hibernate.dialect.Dialect 175 <init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+26 Apr 2021 19:07:09,685 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl 47 getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@276cc8dc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+26 Apr 2021 19:07:16,124 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 52 initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
