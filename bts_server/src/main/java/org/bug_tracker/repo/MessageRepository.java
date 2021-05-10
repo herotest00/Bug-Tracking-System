@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface MessageRepository extends JpaRepository<Message, Long> {
 
-    public List<Message> findMessagesByBug_IdOrderBySendDateAsc(long id);
+    List<Message> findMessagesByBug_IdOrderBySendDateAsc(long id);
 }

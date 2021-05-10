@@ -62,7 +62,7 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
     }
 
     @Override
-    public void updateBugs(Bug bug, ActionType actionType) throws RemoteException {
+    public void updateBugs(Bug bug, ActionType actionType) {
         switch (actionType) {
             case ADD -> Platform.runLater(() -> {
                 System.out.println(bug);
@@ -81,12 +81,10 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
     }
 
     @Override
-    public void updateMessages(Message message) throws RemoteException {
+    public void updateMessages(Message message) {
         ArrayList<ObservableList<Message>> lists = chats.get(message.getBug());
         if (lists != null) {
-            Platform.runLater(() -> {
-                lists.forEach(list -> list.add(message));
-            });
+            Platform.runLater(() -> lists.forEach(list -> list.add(message)));
         }
     }
 

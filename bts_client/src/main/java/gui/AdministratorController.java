@@ -1,9 +1,7 @@
 package gui;
 
-import constants.BugStatus;
 import constants.UserType;
 import domain.User;
-import exceptions.RepoException;
 import exceptions.ServiceException;
 import gui.utils.SceneManager;
 import gui.utils.enums.Scenes;

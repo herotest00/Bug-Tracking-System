@@ -1,6 +1,5 @@
 package gui;
 
-import constants.UserType;
 import domain.User;
 import domain.validator.ValidationException;
 import exceptions.RepoException;
