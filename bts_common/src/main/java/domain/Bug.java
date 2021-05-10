@@ -2,6 +2,8 @@ package domain;
 
 import constants.BugStatus;
 import constants.DateConstants;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 import java.time.LocalDateTime;
 

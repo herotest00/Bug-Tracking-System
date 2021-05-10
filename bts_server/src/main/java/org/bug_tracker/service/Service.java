@@ -17,6 +17,7 @@ import java.rmi.RemoteException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 @org.springframework.stereotype.Service
@@ -60,7 +61,7 @@ public class Service implements IService {
     public void reportBug(User tester, String name, String description, LocalDateTime reportDate) {
         Bug bug = new Bug(name, description, reportDate, tester, BugStatus.OPEN);
         try {
-            bugRepository.save(bug);
+            bug = bugRepository.save(bug);
         } catch (Exception e) {
             throw new ServiceException(e.getMessage());
         }
@@ -100,7 +101,6 @@ public class Service implements IService {
                                 }
                                 case ASSIGNED -> {
                                     if (bug.getTester().equals(user) || bug.getProgrammer().equals(user)) {
-                                        System.out.println(user);
                                         client.updateBugs(bug, actionType);
                                     } else {
                                         client.updateBugs(bug, ActionType.REMOVE);
@@ -133,8 +133,12 @@ public class Service implements IService {
 
     @Override
     public void deleteBug(long id) {
-        Bug bug = new Bug(id);
+        Optional<Bug> optional = bugRepository.findById(id);
         try {
+            if (optional.isEmpty()) {
+                throw new Exception("Couldn't find the bug!");
+            }
+            Bug bug = optional.get();
             bugRepository.delete(bug);
             updateBugsForClients(bug, ActionType.REMOVE);
         } catch (Exception e) {

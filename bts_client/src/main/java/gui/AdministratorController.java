@@ -28,7 +28,7 @@ public class AdministratorController implements Controller {
         usersTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         usernameColumn.setCellValueFactory(new PropertyValueFactory<>("username"));
         userTypeColumn.setCellValueFactory(new PropertyValueFactory<>("userType"));
-        userTypeComboBox.setItems(FXCollections.observableArrayList(UserType.values()));
+        userTypeComboBox.setItems(FXCollections.observableArrayList(UserType.TESTER, UserType.PROGRAMMER));
         usernameColumn.setStyle("-fx-alignment: CENTER;");
         userTypeColumn.setStyle("-fx-alignment: CENTER; ");
     }

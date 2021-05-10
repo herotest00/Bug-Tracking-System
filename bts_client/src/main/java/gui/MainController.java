@@ -63,13 +63,11 @@ public class MainController extends UnicastRemoteObject implements Observer, Ser
 
     @Override
     public void updateBugs(Bug bug, ActionType actionType) {
+        System.out.println("RECEIVED: " + bug);
         switch (actionType) {
             case ADD -> Platform.runLater(() -> {
-                System.out.println(bug);
                 bugs.remove(bug);
-                System.out.println(bugs);
                 bugs.add(bug);
-                System.out.println(bugs);
             });
             case UPDATE -> Platform.runLater(() -> {
                 var poz = bugs.indexOf(bug);
