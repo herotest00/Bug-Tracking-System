@@ -199,10 +199,15 @@ public class Service implements IService {
     public User login(String username, String password, Observer client) {
         User user = userRepository.findByUsernameAndPassword(username, password);
         if (user != null && user.getUserType() != null) {
-            if (loggedClients.put(user, client) != null)
+            if (loggedClients.containsKey(user)) {
                 throw new ServiceException("User already logged in!");
+            }
+            else {
+                loggedClients.put(user, client);
+            }
         }
         else throw new ServiceException("Invalid username/password!");
+        System.out.println(loggedClients);
         return user;
     }
 
